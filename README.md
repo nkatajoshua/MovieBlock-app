@@ -1,2 +1,2 @@
 # MovieBlock
- Web project for movies
+ Web application project for movies
