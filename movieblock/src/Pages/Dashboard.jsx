@@ -1,6 +1,6 @@
 import React from "react"
 import './Dashboard.css';
-import SeacrhBar from "./Searchabr";
+import SeacrhBar from "./Searchbar";
 
 function Dashboard(){
     return(
