@@ -1,0 +1,21 @@
+.nav{
+    background-color: #38c5f0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 990;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+li{
+    margin:0 50px;
+    color: rgb(2, 9, 15);
+    font-weight: bolder;
+    font-size: 20px;
+}

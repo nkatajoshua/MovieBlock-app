@@ -3,15 +3,18 @@ import './Dashboard.css';
 
 function Dashboard(){
     return(
-       <nav>
+       <div className="nav">
         <ul>
-            <li><a>Dashboard</a></li>
+            <li>MovieBlock</li>
         </ul>
-       </nav>
-
-       {/*Create a seacrh form with a submit button*/}
-       
+        <div className="search-container">
+            <form>
+                <input type="text" placeholder="What do you want to watch..."></input>
+                <button type='submit'><i class='fa fa-search'></i></button>
+            </form>
+        </div>
+       </div>
     )
-}
+};
 
 export default Dashboard;
