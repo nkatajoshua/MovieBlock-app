@@ -1,35 +1,31 @@
-import React,{ useState, useEffect } from 'react';
-import './Searchbar.css';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
 
+function MyComponent() {
+  const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
-function SerachBar(props){
+  useEffect(() => {
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=311c30cde07e03c2566a3d8d8409c3b8&query=${searchTerm}`)
+      .then(response => response.json())
+      .then(data => setMovies(data.results));
+  }, [searchTerm]);
 
-   const[nameList, setNameList] = useState([])
-   const [searchTerm, handleSubmit] = useState ('')
+  const handleSearch = event => {
+    setSearchTerm(event.target.value);
+  };
 
-   useEffect(()=>{
-    axios.get('https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?limit=10')
-    .then((response)=>{setNameList(response.data.results)})
-   },[])
-
-    return(
-        <form onSubmit={handleSubmit} className='formdesign'>
-            <input type='text' placeholder='What do you want to watch....' value={searchTerm} onChange={(e)=>handleSubmit(e.target.value)}/>
-            {nameList.filter((item)=>{
-                if (searchTerm===""){
-                   return item 
-                }
-                else if(item.name.toLowerCase().includes(searchTerm.toLowerCase())){
-                    return item
-                }
-            })
-            .map((item)=>{
-            return <h1>{item.name}</h1>
-            })}
-            <button type='submit'>Search</button>
-        </form>
-    );
+  return (
+    <div>
+      <input type="text" placeholder="Search for a movie" value={searchTerm} onChange={handleSearch} />
+      {movies.length > 0 ? (
+        <ul>
+          {movies.map(movie => (
+            <li key={movie.id}>{movie.title}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>No movies found</p>
+      )}
+    </div>
+  );
 }
-
-export default SerachBar;
