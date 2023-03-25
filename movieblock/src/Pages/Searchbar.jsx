@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function MyComponent() {
+function Searchbar() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -13,7 +13,7 @@ function MyComponent() {
   const handleSearch = event => {
     setSearchTerm(event.target.value);
   };
-
+cd 
   return (
     <div>
       <input type="text" placeholder="Search for a movie" value={searchTerm} onChange={handleSearch} />

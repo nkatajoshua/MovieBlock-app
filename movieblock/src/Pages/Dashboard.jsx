@@ -1,6 +1,6 @@
 import React from "react"
 import './Dashboard.css';
-import SeacrhBar from "./Searchbar";
+import SearchBar from "./Searchbar";
 
 function Dashboard(){
     return(
@@ -11,7 +11,7 @@ function Dashboard(){
                MovieBlock
             </ul>
          </nav>
-         <SeacrhBar/>
+         <SearchBar/>
        </header>
 
        </>
