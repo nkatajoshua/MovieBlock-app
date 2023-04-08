@@ -1,0 +1,58 @@
+body {
+    background-image: url(https://images.pexels.com/photos/2847648/pexels-photo-2847648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+  
+h1 {
+    margin-bottom: 30px;
+}
+  
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+  
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+  
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+  
+.card-details {
+    padding: 20px;
+}
+  
+.card-details h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+  
+.card-details p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
