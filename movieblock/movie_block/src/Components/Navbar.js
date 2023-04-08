@@ -1,11 +1,12 @@
 import React from 'react';
 import './Navbar.css';
+import { Link } from 'react';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <a>MovieBlock</a>
+        <Link to='/'>MovieBlock</Link>
       </div>
     </nav>
   );
