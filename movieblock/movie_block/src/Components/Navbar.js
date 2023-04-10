@@ -7,6 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-brand">
         <Link to='/'> Home </Link>
+        <Link to='/tvshows'> Tv shows </Link> 
       </div>
     </nav>
   );
