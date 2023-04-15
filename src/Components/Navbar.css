@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    padding: 1rem;
+}
+  
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+}
+  
+nav a:hover {
+    background-color: #f8bb5a;
+}
+  
