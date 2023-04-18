@@ -22,6 +22,7 @@ const Home = () => {
   return (
     <div className="container">
       <h1>Trending Movies This Week</h1>
+      <h1> C</h1>
       <div className="card-container">
         {trending.map((item) => (
           <div className="card" key={item.id}>
